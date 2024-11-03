@@ -3,10 +3,12 @@ import React, { FC } from "react";
 import scss from "./Login.module.scss";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useSignInMutation } from "@/redux/api/register";
+import { useRouter } from "next/navigation";
 
 const Login: FC = () => {
   const { register, handleSubmit } = useForm<ISignin>();
   const [login] = useSignInMutation();
+  const router = useRouter();
 
   const onSubmit: SubmitHandler<ISignin> = async (data) => {
     try {
@@ -15,6 +17,7 @@ const Login: FC = () => {
         password: data.password,
       };
       await login(newData);
+      router.push("/");
     } catch (error) {
       console.log(error);
     }

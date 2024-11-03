@@ -4,10 +4,12 @@ import scss from "./SignUpPage.module.scss";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useSignUpMutation } from "@/redux/api/register";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const SignUpPage: FC = () => {
   const { register, handleSubmit } = useForm<IUser>();
   const [signUp] = useSignUpMutation();
+  const router = useRouter();
 
   const onSubmit: SubmitHandler<IUser> = async (data) => {
     try {
@@ -18,6 +20,7 @@ const SignUpPage: FC = () => {
         password: data.password,
       };
       signUp(newData);
+      router.push("/");
     } catch (error) {
       console.log(error);
     }

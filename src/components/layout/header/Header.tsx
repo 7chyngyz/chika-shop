@@ -14,6 +14,7 @@ import SearchMulti from "@/components/shared/SearchSection/SearchMulti";
 import { Badge } from "@mui/material";
 import MailIcon from "@mui/icons-material/Mail";
 import { useGetProductsQuery } from "@/redux/api/product";
+import axios from "axios";
 
 export default function Header() {
   const [user, setUser] = useState<IUser | undefined>(undefined);
@@ -24,15 +25,15 @@ export default function Header() {
     typeof window !== "undefined" && window.innerWidth <= 768
   );
 
-  // const fetchUser = async () => {
-  //   try {
-  //     const { data } = await axios.get("/api/v1/get-me");
-  //     setUser(data);
-  //     console.log("user", data);
-  //   } catch (error) {
-  //     console.error("Error fetching user:", error);
-  //   }
-  // };
+  const fetchUser = async () => {
+    try {
+      const { data } = await axios.get("/api/v1/get-me");
+      setUser(data);
+      console.log("user", data);
+    } catch (error) {
+      console.error("Error fetching user:", error);
+    }
+  };
 
   const handleLogout = () => {
     if (session) {
@@ -43,9 +44,9 @@ export default function Header() {
     }
   };
 
-  // useEffect(() => {
-  //   fetchUser();
-  // }, []);
+  useEffect(() => {
+    fetchUser();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -103,7 +104,7 @@ export default function Header() {
                       <FaRegUser className={scss.icon3} />
                     </b>
                     <div className={scss.trip}>
-                      {/* <span>{session?.user?.email || user?.email}</span> */}
+                      <span>{session?.user?.email || user?.email}</span>
                       <ul>
                         <li>Manage my account</li>
                         <li>My order</li>
