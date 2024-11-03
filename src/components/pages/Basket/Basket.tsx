@@ -29,7 +29,7 @@ const Basket = () => {
               cart.map((item) => (
                 <div className={scss.cart_block} key={item.id}>
                   <div className={scss.block1}>
-                    <img src={item.image} alt={item.title} />
+                    <img src={item.image} alt={item.title} /> 
                     <h4>{truncateText(item.title, 25)}</h4>
                   </div>
                   <div className={scss.block2}>

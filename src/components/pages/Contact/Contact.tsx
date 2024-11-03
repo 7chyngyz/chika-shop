@@ -19,7 +19,6 @@ const Contact: FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
   } = useForm<IFormTelegram>({ mode: "onChange" });
 
   const messageModel = (data: IFormTelegram) => {

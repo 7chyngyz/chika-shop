@@ -1,30 +1,13 @@
 "use client";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import scss from "./About.module.scss";
 import { GiShop } from "react-icons/gi";
 import { BiSolidBadgeDollar } from "react-icons/bi";
 import { BsFillHandbagFill } from "react-icons/bs";
 import { FaMoneyBill } from "react-icons/fa6";
-// import { slider2 } from "@/constants/links";
-// import Image from "next/image";
 import Commerce from "../HomeSections/Commerce";
 
 const About: FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  // const [currentSlide, setCurrentSlide] = useState(0);
-
-  // const nextSlide = () => {
-  //   setCurrentSlide((prevSlide) => (prevSlide + 1) % slider2.length);
-  // };
-
-  // const handleBoxClick = (index: number) => {
-  //   setActiveIndex(index);
-  // };
-
-  // useEffect(() => {
-  //   const interval = setInterval(nextSlide, 2000);
-  //   return () => clearInterval(interval);
-  // }, []);
 
   return (
     <section className={scss.About}>
@@ -59,10 +42,7 @@ const About: FC = () => {
         <div className={scss.grid_content}>
           <div className={scss.grid}>
             <div
-              className={`${scss.column} ${
-                activeIndex === 0 ? scss.active : ""
-              }`}
-              onClick={() => handleBoxClick(0)}
+              className={scss.column}
             >
               <button>
                 <GiShop />
@@ -71,10 +51,7 @@ const About: FC = () => {
               <span>Sallers active our site</span>
             </div>
             <div
-              className={`${scss.column} ${
-                activeIndex === 1 ? scss.active : ""
-              }`}
-              onClick={() => handleBoxClick(1)}
+               className={scss.column}
             >
               <button>
                 <BiSolidBadgeDollar />
@@ -83,10 +60,7 @@ const About: FC = () => {
               <span>Mapnthly Product Sale</span>
             </div>
             <div
-              className={`${scss.column} ${
-                activeIndex === 2 ? scss.active : ""
-              }`}
-              onClick={() => handleBoxClick(2)}
+              className={scss.column}
             >
               <button>
                 <BsFillHandbagFill />
@@ -95,10 +69,7 @@ const About: FC = () => {
               <span>Customer active in our site</span>
             </div>
             <div
-              className={`${scss.column} ${
-                activeIndex === 3 ? scss.active : ""
-              }`}
-              onClick={() => handleBoxClick(3)}
+              className={scss.column}
             >
               <button>
                 <FaMoneyBill />
@@ -111,45 +82,7 @@ const About: FC = () => {
         <div className={scss.comerce}>
           <Commerce />
         </div>
-        {/* <div className={scss.slider_content}>
-          {slider2.map((slide, index) => (
-            <div
-              key={index}
-              className={`${scss.slide} ${
-                currentSlide === index ? scss.active : ""
-              }`}
-            >
-              <div className={scss.content_cart}>
-                <div className={scss.content_image}>
-                  <Image
-                    src={slide.image}
-                    alt="person"
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
-                  />
-                </div>
-                <div className={scss.content_text}>
-                  <p>{slide.name}</p>
-                  <span>{slide.job}</span>
-                </div>
-              </div>
-            </div>
-          ))}
-
-          <div className={scss.navDots}>
-            {slider2.map((_, index) => (
-              <span
-                key={index}
-                className={`${scss.dot} ${
-                  currentSlide === index ? scss.active : ""
-                }`}
-                onClick={() => setCurrentSlide(index)}
-              />
-            ))}
-          </div>
-        </div> */}
-      </div>
+       </div>
     </section>
   );
 };

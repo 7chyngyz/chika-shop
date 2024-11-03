@@ -3,7 +3,6 @@ import scss from "./Commerce.module.scss";
 import { FaTruckFast } from "react-icons/fa6";
 import { MdOutlineHeadsetMic } from "react-icons/md";
 import { BsShieldCheck } from "react-icons/bs";
-import { FaArrowUp } from "react-icons/fa6";
 
 const Commerce: FC = () => {
   return (

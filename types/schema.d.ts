@@ -29,13 +29,3 @@ interface IProductFromApi {
   category: string;
   quantity: number;
 }
-
-// interface IFavourite {
-//   id: number;
-//   image: string;
-//   title: string;
-//   price: number;
-//   description: string;
-//   color: string;
-//   size: string;
-// }

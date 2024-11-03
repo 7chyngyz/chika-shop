@@ -4,7 +4,7 @@ import styles from "./Featured.module.scss";
 import { useFavoriteStore } from "../../../../store/useFavoriteStore";
 
 const FavoriteList = () => {
-  const { favorites, removeFavorite, toggleFavorite } = useFavoriteStore();
+  const { favorites, toggleFavorite } = useFavoriteStore();
 
   if (favorites.length === 0) {
     return (

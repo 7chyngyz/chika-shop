@@ -2,7 +2,6 @@ import React, { FC, ReactNode } from "react";
 import scss from "./LayoutSite.module.scss";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
-import Categories from "../pages/Categories/Categories";
 import TopHeader from "./header/TopHeader";
 
 interface LayoutSiteProps {

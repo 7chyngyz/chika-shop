@@ -1,12 +1,10 @@
 "use client";
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import scss from "./SearchPage.module.scss";
-import { useParams } from "next/navigation";
 import { useSearchStore } from "../../../../store/useSerachStore";
 import { useGetProductsQuery } from "@/redux/api/product";
 import SkeletonCart from "@/components/ui/SkeletonCart";
 import Link from "next/link";
-import { FaRegHeart } from "react-icons/fa6";
 import { LuEye } from "react-icons/lu";
 import { useFavoriteStore } from "../../../../store/useFavoriteStore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -16,10 +14,9 @@ import { Footer } from "antd/es/layout/layout";
 import useCartStore, { CartItem } from "../../../../store/useBasketStore";
 
 const SearchPage: FC = () => {
-  const { cart, addToCart } = useCartStore();
+  const {  addToCart } = useCartStore();
   const { query } = useSearchStore();
-  const params = useParams();
-  const { data: products = [], isLoading } = useGetProductsQuery(); // Дефолтное значение - пустой массив
+  const { data: products = [], isLoading } = useGetProductsQuery(); 
   const { favorites, toggleFavorite } = useFavoriteStore();
 
   const isFavorite = (id: number) => favorites.some((item) => item.id === id);

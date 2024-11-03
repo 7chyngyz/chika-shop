@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import scss from "./SearchMulti.module.scss";
 import { useRouter } from "next/navigation";
 import { useSearchStore } from "../../../../store/useSerachStore";

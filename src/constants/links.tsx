@@ -5,9 +5,6 @@ import image2 from "../assets/Apple-iPhone-15-Pro.jpg";
 import image3 from "../assets/iphone-16-blue-roundup-header.webp";
 import image4 from "../assets/image-iphone-13.webp";
 import image5 from "../assets/apple-iphone-11-pro-max-4.jpg";
-import tom from "../assets/tom-cruise.png";
-import emma from "../assets/emma-watson.png";
-import will from "../assets/will-smith.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export const links = [

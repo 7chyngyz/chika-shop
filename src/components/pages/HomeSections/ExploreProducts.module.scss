@@ -21,7 +21,7 @@
     transition: background 0.3s;
 
     &:hover {
-      background: rgb(192, 53, 53); // темнее при наведении
+      background: rgb(192, 53, 53); 
     }
   }
 
@@ -53,7 +53,7 @@
       h1 {
         margin-top: 20px;
         font-size: 28px;
-        font-weight: 700; // более жирный шрифт для заголовка
+        font-weight: 700; 
       }
     }
 
@@ -84,16 +84,16 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          background: white; // светлый фон для области с изображением
+          background: white; 
 
           img {
             width: 220px;
             height: 170px;
-            transition: transform 0.3s; // плавная анимация при наведении
+            transition: transform 0.3s; 
           }
 
           &:hover img {
-            transform: scale(1.05); // увеличение изображения при наведении
+            transform: scale(1.05); 
           }
         }
 

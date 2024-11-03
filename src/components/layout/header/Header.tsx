@@ -11,8 +11,6 @@ import BurgerButton from "@/components/ui/BurgerButton/BurgerButton";
 import BurgerMenu from "@/components/ui/BurgerMenu/BurgerMenu";
 import { links, linksAuth } from "@/constants/links";
 import SearchMulti from "@/components/shared/SearchSection/SearchMulti";
-import { Badge } from "@mui/material";
-import MailIcon from "@mui/icons-material/Mail";
 import { useGetProductsQuery } from "@/redux/api/product";
 import axios from "axios";
 
@@ -20,7 +18,6 @@ export default function Header() {
   const [user, setUser] = useState<IUser | undefined>(undefined);
   const pathName = usePathname();
   const { data: session } = useSession();
-  const { data: product } = useGetProductsQuery();
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 768
   );

@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
-import type { Prisma, User } from "@prisma/client";
+import type { User } from "@prisma/client";
 
 export const POST = async (request: Request): Promise<Response> => {
   const { email, password }: { email: string; password: string } =

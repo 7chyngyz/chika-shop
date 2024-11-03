@@ -7,19 +7,19 @@ const Categories = () => {
       <div className="container">
         <div className={scss.content}>
           <select>
-            <option>Woman’s Fashion</option>
+            <option>Woman&apos;s Fashion</option> 
           </select>
-          <select >
-            <option>Men’s Fashion</option>
+          <select>
+            <option>Men&apos;s Fashion</option> 
           </select>
           <ul>
             <li>Electronics</li>
-            <li>Home & Lifestyle</li>
+            <li>Home &amp; Lifestyle</li> 
             <li>Medicine</li>
-            <li>Sports & Outdoor</li>
-            <li>Baby's & Toys</li>
-            <li>Groceries & Pets</li>
-            <li>Health & Beauty</li>
+            <li>Sports &amp; Outdoor</li> 
+            <li>Baby&apos;s &amp; Toys</li> 
+            <li>Groceries &amp; Pets</li> 
+            <li>Health &amp; Beauty</li> 
           </ul>
         </div>
       </div>

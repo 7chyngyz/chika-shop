@@ -1,5 +1,5 @@
 "use client";
-import { FC, ReactNode, useEffect, useState } from "react";
+import { FC, ReactNode } from "react";
 import ReduxProvider from "@/providers/ReduxProvider";
 
 interface ILayoutClientProps {

@@ -12,7 +12,7 @@ import useCartStore, { CartItem } from "../../../../store/useBasketStore";
 const Cart: FC = () => {
   const { data, isLoading } = useGetProductsQuery();
   const { favorites, toggleFavorite } = useFavoriteStore();
-  const { cart, addToCart } = useCartStore();
+  const { addToCart } = useCartStore();
 
   const isFavorite = (id: number) => favorites.some((item) => item.id === id);
 
@@ -28,10 +28,7 @@ const Cart: FC = () => {
     addToCart(itemWith);
   };
 
-  const truncateDescription = (
-    description: string,
-    maxLength: number
-  ): string =>
+  const truncateDescription = (description: string, maxLength: number): string =>
     description.length <= maxLength
       ? description
       : `${description.slice(0, maxLength)}...`;
@@ -42,11 +39,10 @@ const Cart: FC = () => {
         <div className={scss.content}>
           <div className={scss.title}>
             <div className={scss.box}></div>
-            <h2>Today's</h2>
+            <h2>Today&apos;s</h2> 
           </div>
           <div className={scss.title2}>
             <h1>Flash Sales</h1>
-            {/* <Timer /> */}
           </div>
           <div className={scss.carts}>
             {isLoading

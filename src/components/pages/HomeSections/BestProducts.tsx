@@ -2,17 +2,15 @@
 import React, { FC } from "react";
 import scss from "./BestProducts.module.scss";
 import { useGetProductsQuery } from "@/redux/api/product";
-import Timer from "@/components/ui/Timer";
 import SkeletonCart from "@/components/ui/SkeletonCart";
 import Link from "next/link";
-import { FaRegHeart } from "react-icons/fa6";
 import { LuEye } from "react-icons/lu";
 import { useFavoriteStore } from "../../../../store/useFavoriteStore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import useCartStore, { CartItem } from "../../../../store/useBasketStore";
 
 const BestProducts: FC = () => {
-  const { cart, addToCart } = useCartStore();
+  const { addToCart } = useCartStore();
   const { data, isLoading } = useGetProductsQuery();
   const { favorites, toggleFavorite } = useFavoriteStore();
   const isFavorite = (id: number) => favorites.some((item) => item.id === id);
@@ -50,7 +48,6 @@ const BestProducts: FC = () => {
           </div>
           <div className={scss.title2}>
             <h1>Best Selling Products</h1>
-            {/* <Timer /> */}
           </div>
           <div className={scss.carts}>
             {isLoading

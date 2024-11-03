@@ -45,8 +45,8 @@ const ProductDetails: FC = () => {
                 <hr />
               </div>
               <div className={scss.product_det}>
-                <h3>Colours: {itemDetails?.color}</h3>
-                <h4>Size: {itemDetails?.size}</h4>
+                <h3>Colours: {itemDetails?.quantity}</h3>
+                <h4>Size: {itemDetails?.category}</h4>
               </div>
               <div className={scss.btn}>
                 <div className={scss.counter}>

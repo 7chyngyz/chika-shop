@@ -1,10 +1,8 @@
 "use client";
-import { useState } from "react";
 import scss from "./BurgerButton.module.scss";
 import { useHeaderStore } from "../../../../store/useHeaderStore";
 
 const BurgerButton = () => {
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
   const { isOpen, setIsOpen } = useHeaderStore();
   return (
     <>

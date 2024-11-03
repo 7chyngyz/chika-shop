@@ -12,7 +12,7 @@ import useCartStore, { CartItem } from "../../../../store/useBasketStore";
 const ExploreProducts: FC = () => {
   const { data: product, isLoading } = useGetProductsQuery();
   const { favorites, toggleFavorite } = useFavoriteStore();
-  const { cart, addToCart } = useCartStore();
+  const { addToCart } = useCartStore();
   const isFavorite = (id: number) => favorites.some((item) => item.id === id);
 
   const handleAddToCart = (item: IProductFromApi) => {
@@ -63,7 +63,7 @@ const ExploreProducts: FC = () => {
                         onClick={() => handleAddToCart(product)}
                       >
                         Add To Cart
-                      </button>{" "}
+                      </button>
                       <div className={scss.icons}>
                         <div className={scss.favorite_button}>
                           <p
