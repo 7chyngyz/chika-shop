@@ -1,5 +1,4 @@
 "use client";
-import React, { FC, useState } from "react";
 import scss from "./About.module.scss";
 import { GiShop } from "react-icons/gi";
 import { BiSolidBadgeDollar } from "react-icons/bi";
@@ -7,7 +6,7 @@ import { BsFillHandbagFill } from "react-icons/bs";
 import { FaMoneyBill } from "react-icons/fa6";
 import Commerce from "../HomeSections/Commerce";
 
-const About: FC = () => {
+const About = () => {
 
   return (
     <section className={scss.About}>

@@ -28,7 +28,7 @@ export const POST = async (request: Request) => {
       },
     });
 
-    const { password, ...userWithoutPassword } = user;
+    const { ...userWithoutPassword } = user;
     return NextResponse.json(userWithoutPassword, { status: 201 });
   } catch (error) {
     console.log("Error creating user:", error);

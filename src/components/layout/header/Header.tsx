@@ -11,7 +11,6 @@ import BurgerButton from "@/components/ui/BurgerButton/BurgerButton";
 import BurgerMenu from "@/components/ui/BurgerMenu/BurgerMenu";
 import { links, linksAuth } from "@/constants/links";
 import SearchMulti from "@/components/shared/SearchSection/SearchMulti";
-import { useGetProductsQuery } from "@/redux/api/product";
 import axios from "axios";
 
 export default function Header() {
