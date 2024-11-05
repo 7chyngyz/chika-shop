@@ -17,7 +17,7 @@ const About = () => {
             <div className={scss.title}>
               <h1>Our Story</h1>
               <span>
-                Launced in 2015, Exclusive is South Asia’s premier online
+                Launced in 2015, Exclusive is South Asias premier online
                 shopping
                 <br />
                 makterplace with an active presense in Bangladesh. Supported
